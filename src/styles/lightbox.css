@@ -1,0 +1,111 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox-image {
+  display: block;
+
+  max-width: 82vw;
+  max-height: 82vh;
+
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Close button */
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: #222222;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  cursor: pointer;
+  z-index: 2010;
+}
+
+.lightbox-close:hover {
+  background: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Previous / Next buttons */
+
+.lightbox-previous,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: #222222;
+
+  font-size: 26px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  z-index: 2010;
+}
+
+.lightbox-previous {
+  left: 28px;
+}
+
+.lightbox-next {
+  right: 28px;
+}
+
+.lightbox-previous:hover,
+.lightbox-next:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Photo counter */
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  z-index: 2010;
+}
